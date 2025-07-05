@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Achievements</title>
+  <style>
+   
+    h1 {
+      font-size: 2.5em;
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #9ca3af;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+    }
+
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding-bottom: 10px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .achievement-card {
+      background-color: #111827;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      min-width: 280px;
+      max-width: 280px;
+      padding: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(4, 173, 196, 0.2);
+    }
+
+    .achievement-card:hover{
+            box-shadow: 0 0 20px rgba(1, 146, 165, 0.9);
+
+    }
+
+    .achievement-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.1em;
+    }
+
+    .achievement-card p {
+      color: #9ca3af;
+      font-size: 0.95em;
+      margin-top: 8px;
+    }
+
+    .year {
+      color: #cbd5e1;
+      font-size: 0.9em;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 5px 12px;
+      font-size: 0.8em;
+      border-radius: 999px;
+      background-color: #e5e7eb1a;
+    }
+
+    .competition { background-color: #bfae72; color: #1f2937; }
+    .academic { background-color: #3b82f6; color: white; }
+    .certification { background-color: #6ee7b7; color: #1f2937; }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      /* border: 2px solid black; */
+      background-color: white;
+      margin-right: 10px;
+    }
+
+    .achievement-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .carousel-nav {
+      background-color: #1f2937;
+      color: white;
+      border: 1px solid #4b5563;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .carousel-nav:hover {
+      background-color: #374151;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-controls {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar-container"></div>
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+<h1>Achievements</h1>
+<p class="description">
+  A collection of recognitions and milestones from my academic, extracurricular, and professional journey.
+</p>
+
+
+<div class="carousel-wrapper">
+  <div class="carousel-container" id="carousel">
+
+    
+    <div class="achievement-card">
+      <div class="year">2023 - Present</div>
+      <div class="achievement-header">
+        <img src="images/books.png" class="icon" />
+        <h3>Founder and President - Book Buzz Club, VIT-AP</h3>
+      </div>
+      <p>Organized book drives, hosted National Librarian Day featured in local newspapers.</p>
+      <div class="badge academic">Academic</div>
+    </div>
+
+     <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/hacker.png" class="icon" />
+        <h3>Top 5 - HackAP Hackathon</h3>
+      </div>
+      <p>Developed a blockchain-based legal assistance app and placed in Top 5 of 25 teams.</p>
+      <div class="badge competition">Competition</div>
+    </div>
+    
+
+    <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/prize.png" class="icon" />
+        <h3>Special Mentions - VLaunch</h3>
+      </div>
+      <p>Recognized for Petify pitch at National Business Pitch Program with teams from IITs and other Esteemed universities of India.</p>
+      <div class="badge competition">Competition</div>
+    </div>
+
+    <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/prize.png" class="icon" />
+        <h3>1st Place - VitAura Business Pitch</h3>
+      </div>
+      <p>Won first place for Supportive Transit-Roadside Legal Aid Platform among top teams in university.</p>
+      <div class="badge competition">Competition</div>
+    </div>
+
+    
+    <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/mic.png" class="icon" />
+        <h3>Hosted WIE - IEEE Conference</h3>
+      </div>
+      <p>Anchored the Women in Engineering program at a national IEEE conference.</p>
+      <div class="badge academic">Academic</div>
+    </div>
+
+
+    <div class="achievement-card">
+      <div class="year">2019</div>
+      <div class="achievement-header">
+        <img src="images/scout1.png" class="icon" />
+        <h3>Rajya Puraskar</h3>
+      </div>
+      <p>Honored with the second-highest state-level award by Bharat Scouts and Guides.</p>
+      <div class="badge certification">Academic</div>
+    </div>
+    <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/duolingo.png" class="icon" />
+        <h3>972-Day Duolingo Streak</h3>
+      </div>
+      <p>Maintained a 972-day language learning streak across Turkish and French.</p>
+      <div class="badge academic">Academic</div>
+    </div>
+
+<div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="images/startup.png" class="icon" />
+        <h3>Presenter - IBS Global Pitch</h3>
+      </div>
+      <p>Represented team Petify at international IBS Global Pitch event.</p>
+      <div class="badge competition">Competition</div>
+    </div>
+    <div class="achievement-card">
+      <div class="year">2024</div>
+      <div class="achievement-header">
+        <img src="https://img.icons8.com/emoji/48/milky-way.png" class="icon" />
+        <h3>Canva 100+ Designs Milestone</h3>
+      </div>
+      <p>Designed over 100 assets for academic and club events on Canva.</p>
+      <div class="badge certification">Certification</div>
+    </div>
+
+
+    
+
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-nav" onclick="scrollCarousel(-1)">&#8249;</button>
+    <button class="carousel-nav" onclick="scrollCarousel(1)">&#8250;</button>
+  </div>
+</div>
+
+<script>
+  function scrollCarousel(direction) {
+    const container = document.getElementById('carousel');
+    const scrollAmount = 320;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

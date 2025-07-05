@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meghana Naidu Thokala</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1117;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .left-section {
+      flex: 1;
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bio {
+      margin-bottom: 30px;
+    }
+
+    .bio h2, .grid-box h3 {
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-areas:
+        "education experience"
+        "education certifications";
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .education {
+      grid-area: education;
+      background-color: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      height: 100%;
+    }
+
+    .experience {
+      grid-area: experience;
+      background-color: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .certifications {
+      grid-area: certifications;
+      background-color: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .profile-img {
+      border-radius: 50%;
+      border: 5px solid white;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .cgpa-badge {
+      background-color: #3b82f6;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .desc {
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+    .tags{
+      color: #3b82f6;
+    }
+    h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .gpa {
+      background-color: #3b82f6;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+
+    .title {
+      font-size: 0.95em;
+      color: #94a3b8;
+      margin-bottom: 15px;
+    }
+
+   
+
+   
+
+    .bio-text {
+  font-size: 1.5em; /* Or 18px, 24px etc. */
+  font-weight: 700; /* Optional */
+}
+.plainBox{
+        box-shadow: 0 0 12px rgba(4, 173, 196, 0.2);
+
+}
+.plainBox:hover {
+      box-shadow: 0 0 20px rgba(7, 162, 182, 0.9);
+    }
+
+    .plainBoxButton{
+        box-shadow: 0 0 12px rgba(4, 174, 196, 0.651);
+
+}
+.plainBoxutton:hover {
+      box-shadow: 0 0 20px rgba(7, 162, 182, 0.948);
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR CONTAINER -->
+<div id="navbar-container"></div>
+
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="bio">
+        <div class="skill-title"><span class="icon" ><img src="/images/bio.png" class="popping"  alt="LinkedIn" width="30" height="30"></span><b class="bio-text">BIO</b></div>
+        <p>Computer Science student with a passion for building efficient, scalable applications. I specialize in backend development and AI/ML, combining technical knowledge with problem-solving to build real-world solutions.</p>
+      </div>
+      <div class="grid">
+       <div class="grid-box education plainBox">
+  <div class="skill-title"><span class="icon"><img src="images/education.png" class="popping" alt="LinkedIn" width="30" height="30"></span>EDUCATION</div>
+  <p>
+    <strong>B.Tech in Computer Science and Engineering (Core)</strong><br>
+    <b>Vellore Institute of Technology, Amaravati</b><br>
+    2022 – Present<br>
+    <b>CGPA</b>: 9.23<br><br>
+  </p>
+  <p>
+    <strong>Pre-University</strong><br>
+    <b>Computer Science and PCM</b><br>
+    Deeksha PU College, Bangalore<br>
+    2020 – 2022<br>
+    Percentage: 95.16%<br><br>
+  </p>
+  <p>
+    <strong>Schooling</strong><br>
+    <b>Indian Certificate of Secondary Education (ICSE) </b><br>
+    Carmel School, Bangalore<br>
+    2008 – 2020<br>
+    Percentage: 95.1%
+  </p>
+</div>
+
+        <div class="grid-box experience plainBox">
+  <div class="skill-title"><span class="icon"><img src="images/language.png" class="popping" alt="LinkedIn" width="30" height="30"></span>LANGUAGES</div>
+  <ul>
+    <li>English - C2</li>
+    <li>Telugu - C2</li>
+    <li>Kannada - C2</li>
+    <li>Hindi - B2</li>
+    <li>Turkish - A1</li>
+    <li>French - A1</li>
+  </ul>
+</div>
+
+        <div class="grid-box certifications plainBox">
+  <div class="skill-title">
+    <span class="icon">
+      <img src="images/certifications.png" class="popping" alt="Certifications" width="30" height="30">
+    </span>
+    CERTIFICATIONS
+  </div>
+  <ul>
+    <li>
+      <strong>AWS Certified Cloud Practitioner</strong> (Jul 2024)<br>
+      Attained ability to analyze, deploy and operate AWS services, and adhere to AWS best practices.
+    </li>
+    <li>
+      <strong>Excel & Power BI</strong> – Finlatics (2024)
+    </li>
+    <li>
+      <strong>IDS Blockchain Developer</strong> (2025)
+    </li>
+    <li>
+      <strong>Diploma in Advanced Accountancy - HiTech Computers Bangalore</strong><br>
+      Includes Tally, Microsoft Suite
+    </li>
+    <li>
+      <strong>Full Stack Web Development</strong> – Udemy (Ongoing)
+    </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <!-- <div class="right-section">
+      <img class="profile-img" src="/images/profile.jpg" alt="Meghana Naidu Thokala" />
+      <div class="cgpa-badge">9.23 CGPA</div>
+      <div class="name">Meghana Naidu Thokala</div>
+      <div class="desc">Computer Science Student</div>
+      <div>
+        <span class="skill-badge">Java</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Spring Boot</span>
+        <span class="skill-badge">AI/ML</span>
+      </div>
+      <button class="download-btn">⇩ Download Resume</button>
+    </div> -->
+    <div class="right">
+      <img src="images/profile.jpg" alt="Meghana Naidu Thokala" class="profile-img">
+      <div class="gpa">9.23 CGPA</div>
+      <div class="name">Meghana Naidu Thokala</div>
+      <div class="title">Computer Science Student</div>
+      <div class="tag">
+        <span>Java</span>
+        <span>Python</span>
+        <span>AI/ML</span>
+      </div>
+      <h1></h1>
+      <a href="Meghana_Naidu_T_Resume_ATS.pdf" download class="btnwhite plainBoxButton"> Download Resume</a>
+    </div>
+  </div>
+</body>
+</html>

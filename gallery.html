@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+   h1{
+      font-size: 2.5em;
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #9ca3af;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .gallery-grid {
+  column-count: 4;
+  column-gap: 30px;
+  /* column space */
+}
+
+.gallery-item {
+  display: inline-block;
+  margin-bottom: 30px; 
+  /* space between rows */
+  width: 100%;
+  background-color: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2d3748;
+  box-shadow: 0 0 20px rgba(4, 173, 196, 0.1);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 0 20px rgba(1, 146, 165, 0.4);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #2d3748;
+}
+
+.caption {
+  padding: 12px;
+  font-size: 0.9em;
+  color: #d1d5db;
+  text-align: center;
+}
+
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR CONTAINER -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch("/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+  <h1>Gallery</h1>
+  <p class="description">
+    A collection of moments, snapshots, and memories from events and milestones.
+  </p>
+
+  <div class="gallery-grid">
+    <!-- Gallery Item 1 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/1.jpeg" alt="Image 1">
+  <div class="caption">VLaunch national Business Pitch</div>
+</div>
+
+<!-- Gallery Item 2 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/5.jpg" alt="Image 2">
+  <div class="caption">HACK AP Hackathon in Vizag</div>
+</div>
+
+<!-- Gallery Item 3 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/9.jpg" alt="Image 3">
+  <div class="caption">My Duolingo</div>
+</div>
+
+<!-- Gallery Item 4 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/13.jpeg" alt="Image 4">
+  <div class="caption">Winner of Business Pitch</div>
+</div>
+
+<!-- Gallery Item 5 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/2.jpeg" alt="Image 5">
+  <div class="caption">IoT</div>
+</div>
+
+<!-- Gallery Item 6 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/6.jpg" alt="Image 6">
+  <div class="caption">Organizing Campus Halloween Party 2024</div>
+</div>
+
+<!-- Gallery Item 7 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/10.jpg" alt="Image 7">
+  <div class="caption">Top 5 of 25 teams in Hack Ap</div>
+</div>
+
+<!-- Gallery Item 8 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/14.jpg" alt="Image 8">
+  <div class="caption">First Event after founding Book Buzz Club</div>
+</div>
+
+<!-- Gallery Item 9 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/3.jpeg" alt="Image 9">
+  <div class="caption">National Library Day organized as President of Book Club</div>
+</div>
+
+<!-- Gallery Item 10 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/7.jpeg" alt="Image 10">
+  <div class="caption">Hosting WIE in IEEE Conference</div>
+</div>
+
+<!-- Gallery Item 11 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/11.jpeg" alt="Image 11">
+  <div class="caption">Special Mentions in VLaunch</div>
+</div>
+
+<!-- Gallery Item 12 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/15.jpeg" alt="Image 12">
+  <div class="caption">Bharath Scouts and Guides</div>
+</div>
+
+<!-- Gallery Item 13 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/4.jpeg" alt="Image 13">
+  <div class="caption">NAtional Librarians' Day 2024</div>
+</div>
+
+<!-- Gallery Item 14 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/8.jpg" alt="Image 14">
+  <div class="caption">Winners VitAura Business Pitch</div>
+</div>
+
+<!-- Gallery Item 15 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/12.jpeg" alt="Image 15">
+  <div class="caption">Presented at IBS Global Pitch</div>
+</div>
+
+<!-- Gallery Item 16 -->
+<div class="gallery-item">
+  <img src="Portfolio Gallery/16.jpg" alt="Image 16">
+  <div class="caption">Driver Drowsiness Detection using ML</div>
+</div>
+
+<!-- Gallery Item 17 -->
+<!-- <div class="gallery-item">
+  <img src="https://via.placeholder.com/300x200" alt="Image 17">
+  <div class="caption">Image 17</div>
+</div> -->
+
+
+    
+
+  </div>
+
+</body>
+</html>

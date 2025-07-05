@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <style>
+    
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      border-bottom: 3px solid #3b82f6;
+    }
+
+    p.description {
+      color: #9ca3af;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .left-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+    }
+
+    .left-image img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contact-info {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .contact-info h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .info-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .info-group img {
+      margin-right: 10px;
+      width: 20px;
+    }
+
+
+    @media (max-width: 768px) {
+      body {
+        padding: 40px 30px;
+      }
+
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-image,
+      .contact-info {
+        width: 75%;
+        
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar-container"></div>
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+<h1><span>Get In Touch</span></h1>
+<p class="description">
+  Have a question or want to work together? Feel free to drop me a message. I'd love to hear from you!
+</p>
+
+<div class="contact-container">
+  <!-- LEFT: Image -->
+  <div class="left-image">
+    <img src="images/contactMeLeft.jpg" alt="Contact" width="30" height="30"/>
+  </div>
+
+  <!-- RIGHT: Info -->
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p>Fill up the form and I'll get back to you as soon as possible.</p>
+
+    <div class="info-group">
+      <img src="https://img.icons8.com/ios-filled/50/3b82f6/new-post.png" alt="Email" />
+      <div><strong>Email</strong><br/>meghana.myb@gmail.com</div>
+    </div>
+
+    <div class="info-group">
+      <img src="https://img.icons8.com/ios-filled/50/3b82f6/phone.png" alt="Phone" />
+      <div><strong>Phone</strong><br/>+91 9986762727</div>
+    </div>
+
+    <div class="info-group">
+      <img src="https://img.icons8.com/ios-filled/50/3b82f6/marker.png" alt="Location" />
+      <div><strong>Location</strong><br/>Bangalore, Karnataka, India</div>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+      <a href="https://github.com/MeghanaNaiduT" class="popping" target="_blank">
+        <img src="images/github.png" alt="GitHub" width="30" height="30">
+      </a>
+      <a href="https://www.linkedin.com/in/meghana-naidu-thokala-05997724a/" class="popping" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn" width="30" height="30">
+      </a>
+      <a href="mailto:meghana.myb@gmail.com" class="popping" target="_blank">
+        <img src="images/email.png" alt="Email" width="30" height="30">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Optional Form (commented as in original)
+<form class="contact-form" action="mailto:meghana.myb@gmail.com" method="post" enctype="text/plain">
+  ... form contents ...
+</form>
+-->
+
+</body>
+</html>

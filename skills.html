@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills</title>
+  <style>
+  
+
+    h1 {
+      font-size: 2.5em;
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #9ca3af;
+      margin-bottom: 40px;
+      max-width: 720px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #1f2937;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #374151;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 0 20px rgba(4, 173, 196, 0.3);
+
+    }
+.skill-box:hover{
+              box-shadow: 0 0 20px rgba(1, 146, 165, 0.9);
+
+
+}
+
+    .icon {
+      font-size: 1.4em;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background-color: #111827;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #8d9196;
+      color: #d1d5db;
+      font-size: 0.85em;
+    }
+    
+    /* .tag {
+  background-color: #1e293b; 
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #3b82f6,
+  color: #e2e8f0;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+} */
+
+
+/* .tag:hover {
+  background-color: #3b82f6; 
+   color: #0f172a;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6); 
+  cursor: default;
+} */
+
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR CONTAINER -->
+<div id="navbar-container"></div>
+<script>
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+<h1>Skills</h1>
+<p class="description">
+  A concise summary of my technical toolkit — combining full-stack development, AI/ML, blockchain, and cloud expertise — built across academic and real-world projects.
+</p>
+
+<div class="grid-container">
+
+  <!-- Programming Languages -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/programmingLanguages.png" class="popping" alt="LinkedIn" width="30" height="30"></span>PROGRAMMING</div>    
+<div class="tags">
+      <div class="tag">Java</div>
+      <div class="tag">Python</div>
+      <div class="tag">SQL</div>
+      <div class="tag">HTML/CSS</div>
+      <div class="tag">R (Data Analytics)</div>
+    </div>
+  </div>
+
+  <!-- Design & Architecture -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/lowLevelDesign.png" class="popping" alt="LinkedIn" width="30" height="30"></span>LOW LEVEL DESIGN</div>    
+    <div class="tags">
+      <div class="tag">OOP</div>
+      <div class="tag">SOLID Principles</div>
+      <div class="tag">MVC Architecture</div>
+      <div class="tag">System Design Patterns</div>
+      <div class="tag">DSA</div>
+    </div>
+  </div>
+
+  <!-- Frameworks & Libraries -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/frameworksAndLibraries.png" class="popping" alt="LinkedIn" width="30" height="30"></span>FRAMEWORKS AND LIBRARIES</div>    
+    <div class="tags">
+      <div class="tag">TensorFlow</div>
+      <div class="tag">PyTorch</div>
+      <div class="tag">Keras</div>
+      <div class="tag">Hugging Face</div>
+      <div class="tag">Scikit-learn</div>
+      <div class="tag">NLTK</div>
+      <div class="tag">Seaborn</div>
+      <div class="tag">Transformers</div>
+      <div class="tag">Spring Boot</div>
+
+    </div>
+  </div>
+
+  <!-- Tools & Platforms (Merged with Cloud & DevOps) -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/toolsAndPlatforms.png" class="popping" alt="LinkedIn" width="30" height="30"></span>TOOLS AND PLATFORMS</div>    
+    <div class="tags">
+      <div class="tag">AWS (Certified)</div>
+      <div class="tag">IntelliJ IDEA</div>
+      <div class="tag">GitHub</div>
+      <div class="tag">Command Line</div>
+      <div class="tag">VS Code</div>
+      <div class="tag">NetBeans</div>
+      <div class="tag">Remix IDE</div>
+    </div>
+  </div>
+
+  <!-- IoT & Hardware -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/IoT.png" class="popping" alt="LinkedIn" width="30" height="30"></span>HARDWARE AND IOT</div>    
+    <div class="tags">
+      <div class="tag">Raspberry Pi</div>
+      <div class="tag">Arduino</div>
+      <div class="tag">Sensor Integration</div>
+      <div class="tag">Real-Time Signal Processing</div>
+    </div>
+  </div>
+
+  <!-- Blockchain -->
+  <div class="skill-box">
+<div class="skill-title"><span class="icon"><img src="images/blockchain.png" class="popping" alt="LinkedIn" width="30" height="30"></span>BLOCKCHAIN</div>    
+    <div class="tags">
+      <div class="tag">Ethereum</div>
+      <div class="tag">Smart Contracts</div>
+      <div class="tag">MetaMask</div>
+      <div class="tag">Ganache</div>
+      <div class="tag">Remix IDE</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
