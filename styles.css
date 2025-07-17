@@ -60,13 +60,17 @@ body {
       box-shadow: 0 0 20px rgba(3, 137, 155, 0.5);
     }
 .skill-title {
-        color:#3b82f6;
-      font-size: 1.2em;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+  color: #3b82f6; /* Blue fill */
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  -webkit-text-stroke: 0.05px white; /* White border around the text */
+  text-stroke: 1px white; /* For future browser support */
+}
+
 .developer-card {
       background-color: transparent;
       color: #e0e0e0;
